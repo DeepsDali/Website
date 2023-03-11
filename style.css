@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --grey: #25280110;
+  --blue: #0f4c75;
+  --light-blue: #0d51ef;
+  --neon: #c2cd62;
+  --light-neon: #e1e7b0ee;
+  /* --ligh-blue: #0ac2eb; */
+}
+body {
+  /* background-color: #b56576; */
+  background-color: #393e46;
+
+  min-height: 100vh;
+}
+.hero {
+  width: 95vw;
+  min-height: 40vh;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr, 1fr, 1fr;
+}
+.first_name {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 1;
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(2em, 23vw, 10rem);
+  /* color: #a89898e2; */
+  color: #9b6a6c;
+}
+.last_name {
+  font-family: "Dancing Script", cursive;
+  font-size: clamp(2em, 23vw, 10rem);
+  grid-column: 1 / span 1;
+  border-bottom: 3px solid #e96479;
+  grid-row: 2 / span 1;
+  justify-self: center;
+  align-self: flex-start;
+  color: #9b6a6c;
+  /* color: #f2e9e4; */
+}
+.title {
+  background-color: #e96479;
+  margin-left: 5px;
+  border-radius: 3px 3px 80px 3px;
+  /* background-color: #7db9b6; */
+  padding: 15px;
+  font-size: clamp(2em, 4vw, 4rem);
+  justify-self: flex-start;
+  align-self: center;
+  font-weight: lighter;
+  font-family: "Quicksand", sans-serif;
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 1;
+  /* color: #e96479; */
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.title:hover {
+}
+@media only screen and (min-width: 768px) {
+  h1 {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 3;
+  }
+  p {
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+    z-index: 5;
+  }
+}
