@@ -5,28 +5,69 @@
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  list-style: none;
+
   box-sizing: border-box;
 }
 :root {
-  --grey: #25280110;
-  --blue: #0f4c75;
-  --light-blue: #0d51ef;
-  --neon: #c2cd62;
-  --light-neon: #e1e7b0ee;
-  /* --ligh-blue: #0ac2eb; */
+  --grey: #393e46;
 }
 body {
   /* background-color: #b56576; */
   background-color: #393e46;
-
+  font-family: "Quicksand", sans-serif;
   min-height: 100vh;
+}
+header {
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  background-color: #e9647820;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 100px;
 }
 .hero {
   width: 95vw;
-  min-height: 40vh;
+  min-height: 15vh;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr, 1fr, 1fr;
+}
+.logo {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  font-size: 3em;
+  background-color: #9b6a6c;
+  padding: 0 6px;
+  border-radius: 0 25px 25px 0;
+}
+.haburger {
+  display: none;
+}
+.nav-bar ul {
+  display: flex;
+}
+.nav-bar ul li a {
+  display: block;
+  font-size: 20px;
+  color: #e96479;
+  padding: 10px 25px;
+  border-radius: 50px;
+}
+.nav-bar ul li a:hover {
+  background-color: #e96479;
+  color: #393e46;
+}
+.mode {
+  font-size: 20px;
+  background-color: #e9647820;
+  color: #e96479;
+  padding: 10px;
+  border-radius: 25px;
+  border: 0;
+  cursor: pointer;
 }
 .first_name {
   grid-column: 1 / span 3;
@@ -53,11 +94,11 @@ body {
   border-radius: 3px 3px 80px 3px;
   /* background-color: #7db9b6; */
   padding: 15px;
-  font-size: clamp(2em, 4vw, 4rem);
+  font-size: clamp(1.5em, 3vw, 3rem);
   justify-self: flex-start;
   align-self: center;
   font-weight: lighter;
-  font-family: "Quicksand", sans-serif;
+
   grid-column: 2 / span 2;
   grid-row: 2 / span 1;
   /* color: #e96479; */
