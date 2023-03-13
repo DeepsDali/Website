@@ -47,7 +47,8 @@ header {
 }
 .nav-bar ul li a {
   display: block;
-  font-size: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
   color: var(--coral);
   padding: 10px 25px;
   border-radius: 50px;
@@ -65,7 +66,7 @@ header {
 }
 .mode {
   font-size: 20px;
-  background-color: var(--light-coral);
+  background-color: #f7d9d9;
   color: var(--coral);
   padding: 10px 25px;
   border-radius: 25px;
@@ -110,7 +111,8 @@ header {
   justify-self: center;
   align-self: flex-end;
   font-weight: lighter;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+  /* box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px; */
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 #pop-1 {
   grid-column: 1 / span 1;
@@ -124,7 +126,13 @@ header {
   justify-self: center;
   align-self: center;
 }
-
+.light-mode {
+  background-color: #f7d9d9;
+}
+.light-mode .mode {
+  background-color: var(--background);
+  color: #f7d9d9;
+}
 @media only screen and (min-width: 768px) {
   .hero {
     width: 95vw;
