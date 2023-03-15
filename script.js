@@ -38,19 +38,35 @@ showDots();
 
 let dotButtons = document.querySelectorAll(".dot");
 
-console.log(dotButtons[0]);
+let showSlides = (index) => {
+  dotButtons.forEach((dotButton) => {
+    dotButton.classList.remove("dot--selected");
+  });
+  dotButtons[index].classList.add("dot--selected");
+  slides.forEach((slide) => {
+    slide.classList.remove("slide--selected");
+  });
+  slides[index].classList.add("slide--selected");
+};
+
 dotButtons.forEach((dotButton, i) => {
-  slides[0].classList.add("slide--selected");
-  dotButtons[0].classList.add("dot--selected");
   dotButton.addEventListener("click", () => {
-    console.log("dot button clicked");
-    dotButtons.forEach((dotButton) => {
-      dotButton.classList.remove("dot--selected");
-    });
-    dotButtons[i].classList.add("dot--selected");
-    slides.forEach((slide) => {
-      slide.classList.remove("slide--selected");
-    });
-    slides[i].classList.add("slide--selected");
+    showSlides(i);
   });
 });
+showSlides(0);
+// show each slide on clicking next and previou buttons
+let n = 1;
+const right = () => {
+  n >= slides.length - 1 ? (n = 0) : n++;
+  showSlides(n);
+};
+const left = () => {
+  n <= 0 ? (n = slides.length - 1) : n--;
+  showSlides(n);
+};
+let prev = document.querySelector(".prev");
+let next = document.querySelector(".next");
+
+prev.addEventListener("click", left);
+next.addEventListener("click", right);
