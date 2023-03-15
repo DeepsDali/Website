@@ -161,7 +161,7 @@ h2 {
 
 .jw_image {
   height: 300px;
-  width: 360px;
+  width: 350px;
   border: 3px solid var(--coral);
   border-radius: 5px;
 }
@@ -194,6 +194,19 @@ h2 {
 }
 #upload_img {
   margin-top: 15px;
+  width: fit-content;
+}
+.play-pause {
+  display: flex;
+  width: 70vw;
+  margin-top: 15px;
+
+  align-items: center;
+  justify-content: center;
+}
+.btn_play_pause {
+  height: 35px;
+  width: 35px;
 }
 .prev,
 .next {
@@ -218,6 +231,15 @@ h2 {
 .prev:hover,
 .next:hover {
   background-color: var(--coral);
+}
+.circle {
+  background-color: #f7d9d9;
+  color: var(--coral);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 30%;
+  border: 0;
+  cursor: pointer;
 }
 @media only screen and (min-width: 768px) {
   .hero {

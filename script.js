@@ -70,3 +70,27 @@ let next = document.querySelector(".next");
 
 prev.addEventListener("click", left);
 next.addEventListener("click", right);
+
+// Add play button
+let playBtn = document.querySelector("#play");
+let pauseBtn = document.querySelector("#pause");
+pauseBtn.style.opacity = 0.2;
+playBtn.style.opacity = 1;
+
+// setInterval(() => {
+//   right();
+// }, 3000);
+playBtn.addEventListener("click", () => {
+  console.log("play button clicked");
+  slideInterval = setInterval(right, 3000);
+  // slideInterval();
+  playBtn.style.opacity = 0.2;
+  pauseBtn.style.opacity = 1;
+});
+
+pauseBtn.addEventListener("click", () => {
+  console.log("pause button clicked");
+  clearInterval(slideInterval);
+  playBtn.style.opacity = 1;
+  pauseBtn.style.opacity = 0.2;
+});
