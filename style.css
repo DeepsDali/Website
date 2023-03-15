@@ -19,15 +19,19 @@ body {
   background-color: var(--background);
   font-family: "Quicksand", sans-serif;
   min-height: 100vh;
+  margin: 0 auto 100px;
 }
 header {
-  width: 100vw;
+  top: 0;
+  position: sticky;
+  /* width: 100vw; */
   height: 60px;
   display: flex;
   background-color: var(--light-coral);
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
+  z-index: 100;
 }
 
 .logo {
@@ -73,10 +77,12 @@ header {
   border: 0;
   cursor: pointer;
 }
-.hero {
-  width: 85vw;
+.container {
+  width: 95vw;
   padding: 20px 0;
   margin: auto;
+}
+.hero {
   display: grid;
   grid-template-columns: 1fr, 1fr, 1fr;
 }
@@ -144,8 +150,6 @@ h2 {
   padding: 5px;
 }
 #carousel {
-  width: 95vw;
-  margin: 2em auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -156,8 +160,12 @@ h2 {
 }
 .jw_image {
   height: 300px;
-  width: 350px;
+  width: 400px;
   padding: 0.5em;
+  display: none;
+}
+.jw_image--selected {
+  display: block;
 }
 .dots {
   width: 100%;
@@ -166,6 +174,18 @@ h2 {
   bottom: 0;
   left: 0;
   text-align: center;
+}
+.dot {
+  height: 12px;
+  width: 12px;
+  background: #f7d9d981;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.dot--selected {
+  background: white;
 }
 @media only screen and (min-width: 768px) {
   .hero {

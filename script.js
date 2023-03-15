@@ -18,3 +18,18 @@ switchMode.addEventListener("click", () => {
     modebtn.innerHTML = "Light Mode";
   }
 });
+
+//carousel dots
+let slides = document.querySelectorAll(".slide");
+console.log(slides);
+let dotsdiv = document.querySelector(".dots");
+
+let showDots = () => {
+  console.log("Execute show dots");
+  slides.forEach((slide) => {
+    let span = document.createElement("span");
+    span.classList.add("dot");
+    dotsdiv.appendChild(span);
+  });
+};
+showDots();
