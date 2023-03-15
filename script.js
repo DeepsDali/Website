@@ -19,7 +19,7 @@ switchMode.addEventListener("click", () => {
   }
 });
 
-//carousel dots
+//show carousel dots
 let slides = document.querySelectorAll(".slide");
 console.log(slides);
 let dotsdiv = document.querySelector(".dots");
@@ -33,3 +33,24 @@ let showDots = () => {
   });
 };
 showDots();
+
+//show each slide on selecting dots
+
+let dotButtons = document.querySelectorAll(".dot");
+
+console.log(dotButtons[0]);
+dotButtons.forEach((dotButton, i) => {
+  slides[0].classList.add("slide--selected");
+  dotButtons[0].classList.add("dot--selected");
+  dotButton.addEventListener("click", () => {
+    console.log("dot button clicked");
+    dotButtons.forEach((dotButton) => {
+      dotButton.classList.remove("dot--selected");
+    });
+    dotButtons[i].classList.add("dot--selected");
+    slides.forEach((slide) => {
+      slide.classList.remove("slide--selected");
+    });
+    slides[i].classList.add("slide--selected");
+  });
+});

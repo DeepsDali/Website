@@ -158,13 +158,16 @@ h2 {
 .slides {
   position: relative;
 }
+
 .jw_image {
   height: 300px;
-  width: 400px;
+  width: 360px;
   padding: 0.5em;
+}
+.slide {
   display: none;
 }
-.jw_image--selected {
+.slide--selected {
   display: block;
 }
 .dots {
@@ -200,6 +203,11 @@ h2 {
     grid-row: 2 / span 1;
     justify-self: center;
     align-self: center;
+  }
+  .jw_image {
+    height: 400px;
+    width: 700px;
+    padding: 0.5em;
   }
 }
 @media only screen and (max-width: 1320px) {
