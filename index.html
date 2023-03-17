@@ -12,8 +12,10 @@
     <title>Website</title>
   </head>
   <body>
-    <header>
-      <div class="logo">DD</div>
+    <header id="header">
+      <div>
+        <a href="#hero_section" class="logo">DD</a>
+      </div>
       <div class="hamburger">
         <div class="line"></div>
         <div class="line"></div>
@@ -28,7 +30,7 @@
         </ul>
       </div>
     </header>
-    <section class="container">
+    <section id="hero_section" class="container">
       <div class="hero">
         <p class="first_name">I'm Deepashri</p>
         <p class="last_name">Dali</p>
@@ -42,26 +44,6 @@
         <div class="slides">
           <a class="prev">❮</a>
           <a class="next">❯</a>
-          <div class="slide">
-            <img
-              class="jw_image"
-              src="./Images/main_image_deep_field_smacs0723-5mb.jpg"
-            />
-          </div>
-          <div class="slide">
-            <img
-              class="jw_image"
-              src="./Images/main_image_star-forming_region_carina_nircam_final-1280.jpg"
-            />
-          </div>
-          <div class="slide">
-            <img
-              class="jw_image"
-              src="./Images/southern-ring-nebula-2-_custom-60c7d16d9c36f085646be2dad4585892c783952d-s1100-c50.jpg"
-            />
-          </div>
-
-          <div class="dots"></div>
         </div>
         <div class="play-pause">
           <button id="play" class="circle">
@@ -79,7 +61,20 @@
             />
           </button>
         </div>
-        <button id="upload_img" class="mode">Upload image</button>
+      
+        <button class="mode upload_img"> <label id = "label" for="file">
+          Upload file
+          <input
+            type="file"
+            accept="image/*"
+            name="image"
+            id="file"
+            onchange="loadFile(event)"
+            style="display: none"
+          />
+        </button>
+
+        <p><img id="output" width="200" /></p>
       </div>
     </section>
     <script src="./script.js"></script>

@@ -8,6 +8,7 @@
   list-style: none;
   box-sizing: border-box;
 }
+
 :root {
   --grey: #3f3351;
   --background: #16213e;
@@ -20,6 +21,8 @@ body {
   font-family: "Quicksand", sans-serif;
   min-height: 100vh;
   margin: 0 auto 100px;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 header {
   top: 0;
@@ -27,7 +30,7 @@ header {
   /* width: 100vw; */
   height: 60px;
   display: flex;
-  background-color: var(--light-coral);
+  background: var(--light-coral);
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
@@ -86,6 +89,7 @@ header {
   display: grid;
   grid-template-columns: 1fr, 1fr, 1fr;
 }
+
 .first_name {
   grid-column: 2 / span 2;
   grid-row: 1 / span 1;
@@ -162,8 +166,10 @@ h2 {
 .jw_image {
   height: 300px;
   width: 350px;
+  max-width: 90vw;
   border: 3px solid var(--coral);
   border-radius: 5px;
+  overflow: hidden;
 }
 .slide {
   display: none;
@@ -192,7 +198,7 @@ h2 {
   background: white;
   transform: scale(1.1);
 }
-#upload_img {
+.upload_img {
   margin-top: 15px;
   width: fit-content;
 }
@@ -241,6 +247,7 @@ h2 {
   border: 0;
   cursor: pointer;
 }
+
 @media only screen and (min-width: 768px) {
   .hero {
     width: 95vw;
