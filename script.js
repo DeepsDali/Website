@@ -141,3 +141,21 @@ var loadFile = function (event) {
   showDots();
   showSlides(imageArray.length - 1);
 };
+//About me
+
+const aboutMeButtons = document.querySelectorAll(".about-me_btn");
+const meInfoDivs = document.querySelectorAll(".me");
+
+aboutMeButtons.forEach((aboutMeButton, index) => {
+  aboutMeButton.addEventListener("click", () => {
+    console.log("About me button clicked");
+    meInfoDivs.forEach((meInfoDiv) => {
+      meInfoDiv.classList.remove("me-active");
+    });
+    aboutMeButtons.forEach((aboutMeButton) => {
+      aboutMeButton.classList.remove("about-me_btn-active");
+    });
+    meInfoDivs[index].classList.add("me-active");
+    aboutMeButtons[index].classList.add("about-me_btn-active");
+  });
+});
