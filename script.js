@@ -172,4 +172,4 @@ let greeting =
     : timeNow >= 12 && timeNow < 18
     ? "afternoon,"
     : "evening,";
-document.querySelector(".greeting").innerHTML = `${greeting}`;
+document.querySelector(".time-period").innerHTML = `${greeting}`;
