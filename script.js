@@ -68,13 +68,17 @@ dotsdiv = document.querySelector(".dots");
 // show each slide on selecting dots
 
 let dotButtons = document.querySelectorAll(".dot");
-//button eventlistener
-dotButtons.forEach((dotButton, i) => {
-  console.log("dot clicked");
-  dotButton.addEventListener("click", () => {
-    showSlides(i);
+
+let addButtonEvent = () => {
+  dotButtons.forEach((dotButton, i) => {
+    console.log("dot clicked");
+    dotButton.addEventListener("click", () => {
+      showSlides(i);
+    });
   });
-});
+};
+
+addButtonEvent();
 
 let showSlides = (index) => {
   // console.log(slides);
@@ -95,7 +99,7 @@ let showSlides = (index) => {
 showSlides(0);
 
 // show each slide on clicking next and previous buttons
-let n = 1;
+let n = 0;
 const right = () => {
   n >= slides.length - 1 ? (n = 0) : n++;
   showSlides(n);
@@ -140,6 +144,7 @@ var loadFile = function (event) {
   createslides();
   showDots();
   showSlides(imageArray.length - 1);
+  addButtonEvent();
 };
 //About me
 
@@ -159,3 +164,12 @@ aboutMeButtons.forEach((aboutMeButton, index) => {
     aboutMeButtons[index].classList.add("about-me_btn-active");
   });
 });
+//greeting
+let timeNow = new Date().getHours();
+let greeting =
+  timeNow >= 5 && timeNow < 12
+    ? "morning,"
+    : timeNow >= 12 && timeNow < 18
+    ? "afternoon,"
+    : "evening,";
+document.querySelector(".greeting").innerHTML = `${greeting}`;
