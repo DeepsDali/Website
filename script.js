@@ -173,3 +173,26 @@ let greeting =
     ? "afternoon,"
     : "evening,";
 document.querySelector(".time-period").innerHTML = `${greeting}`;
+//slider
+let slider = document.getElementById("myRange");
+let img1 = document.querySelector("#img1");
+let img2 = document.querySelector("#img2");
+console.log(slider.value);
+slider.oninput = function () {
+  if (slider.value <= 20) {
+    img2.style.opacity = "0";
+    img1.style.opacity = "1";
+  } else if (slider.value > 20 && slider.value <= 40) {
+    img2.style.opacity = "0.4";
+    img1.style.opacity = "0.8";
+  } else if (slider.value > 40 && slider.value <= 60) {
+    img2.style.opacity = "0.6";
+    img1.style.opacity = "0.6";
+  } else if (slider.value > 60 && slider.value <= 80) {
+    img2.style.opacity = "0.8";
+    img1.style.opacity = "0.4";
+  } else if (slider.value > 80 && slider.value <= 100) {
+    img2.style.opacity = "1";
+    img1.style.opacity = "0";
+  }
+};
