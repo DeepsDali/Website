@@ -13,9 +13,9 @@
 :root {
   --grey: #3d354a;
   --pineapple: #c9b203;
-  --light-pineapple: #ddce9d;
+  --light-pineapple: #faeab1;
   --cream: #fcecdd;
-  --light-grey: #b6a8cb;
+  --light-grey: #faf8f1;
 }
 body {
   background-color: var(--pineapple);
@@ -24,7 +24,7 @@ body {
   margin: 0 auto 100px;
   overflow-x: hidden;
   max-width: 100%;
-  color: var(--cream);
+  color: var(--grey);
   font: 1.5em;
 }
 header {
@@ -162,7 +162,8 @@ header {
 .light-mode .logo,
 .light-mode .pre,
 .light-mode .first_name,
-.light-mode .last_name {
+.light-mode .last_name,
+.light-mode .slider::-webkit-slider-thumb {
   background-color: var(--light-pineapple);
   color: var(--grey);
 }
@@ -181,18 +182,26 @@ header {
   background-color: var(--light-grey);
   color: var(--grey);
 }
-.light-mode .about-me_btn:hover {
+.light-mode .about-me_btn:hover,
+.light-mode .projects-div,
+.light-mode .london-images,
+.light-mode #carousel {
   background-color: var(--light-grey);
 }
 /* light mode ends */
 #carousel {
+  background-color: var(--cream);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: fit-content;
+  margin: auto;
+  padding-bottom: 20px;
 }
 .slides {
   position: relative;
+  padding: 5px;
 }
 
 .jw_image {
@@ -202,8 +211,6 @@ header {
   border: 3px solid var(--grey);
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3),
-    0 17px 17px 0 rgba(0, 0, 0, 0.15);
 }
 .slide {
   display: none;
@@ -238,10 +245,12 @@ header {
 }
 .play-pause {
   display: flex;
-  width: 70vw;
+  width: 200px;
   margin-top: 15px;
   align-items: center;
   justify-content: center;
+  background-color: var(--light-pineapple);
+  border-radius: 15px;
 }
 .btn_play_pause {
   height: 35px;
@@ -309,7 +318,6 @@ header {
   background-color: var(--grey);
   color: var(--cream);
   transition: background-color 0.25s;
-  /* border: solid 1px var(--grey); */
 }
 .about-me_btn:hover {
   background-color: var(--pineapple);
@@ -337,7 +345,7 @@ header {
 
 .me-active {
   display: block;
-  background-color: var(--light-pineapple);
+  background-color: var(--cream);
   color: var(--grey);
 }
 
@@ -351,7 +359,7 @@ h1 {
 h2 {
   color: var(--grey);
   text-align: center;
-  padding: 5px;
+  padding: 15px 5px;
 }
 
 /* slider */
@@ -363,8 +371,14 @@ h2 {
   color: var(--grey);
   display: grid;
   grid-template-columns: 1fr;
-  background-color: var(--light-pineapple);
   padding: 20px;
+  font-weight: bold;
+}
+.int-info {
+  width: 90vw;
+  margin: 2em auto;
+  font-weight: bold;
+  padding: 0 20px;
 }
 #description {
   grid-column: 1 / span 1;
@@ -436,11 +450,10 @@ h2 {
 .myProjects .item {
   position: relative;
   overflow: hidden;
+  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3),
+    0 17px 17px 0 rgba(0, 0, 0, 0.15);
 }
 
-.myProjects .item img {
-  vertical-align: middle;
-}
 .projects-div {
   width: 90vw;
   padding: 20px;
@@ -449,8 +462,11 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-self: center;
-  background-color: var(--light-pineapple);
-  color: var(--pineapple);
+  background-color: var(--cream);
+}
+.projects-div h2 {
+  color: var(--grey);
+  padding: 20px;
 }
 .myProjects .caption {
   cursor: pointer;
@@ -467,7 +483,6 @@ h2 {
   transition: transform 0.5s;
   transform: translateY(100%);
   background: var(--grey);
-  /* background: rgba(30, 4, 65, 0.5); */
   color: white;
 }
 
@@ -492,7 +507,7 @@ h2 {
     min-width: 120px;
   }
   .about {
-    max-width: 70vw;
+    max-width: 80vw;
     min-height: 16em;
     margin: 2em auto 0;
     color: var(--cream);
@@ -509,8 +524,22 @@ h2 {
   .img {
     width: 450px;
   }
+  .projects-div {
+    width: 80vw;
+  }
+  .item {
+    height: 150px;
+    border-radius: 15px;
+  }
+  .carousel {
+    margin: auto;
+    padding: 20px;
+    width: 0vw;
+  }
+  .int-info {
+    width: 80vw;
+  }
 }
-/* projects */
 
 @media only screen and (max-width: 1320px) {
   .header {
