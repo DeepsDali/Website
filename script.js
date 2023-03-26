@@ -23,8 +23,8 @@ let imageArray = [
   "./Images/main_image_deep_field_smacs0723-5mb.jpg",
   "./Images/main_image_star-forming_region_carina_nircam_final-1280.jpg",
   "./Images/southern-ring-nebula-2-_custom-60c7d16d9c36f085646be2dad4585892c783952d-s1100-c50.jpg",
-  "./Images/Jupiter.jpg",
-  "./Images/new-star-formation.jpg",
+  "./Images/Jupiter.JPG",
+  "./Images/new-star-formation.JPG",
 ];
 // console.log(imageArray);
 let slidesDiv = document.querySelector(".slides");
