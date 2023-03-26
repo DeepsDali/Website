@@ -1,6 +1,6 @@
 # Application Website
 
-![Websie](./images/website.JPG "PG")
+![Website](./Images/website.JPG)
 
 ## Description
 

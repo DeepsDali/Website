@@ -242,7 +242,9 @@ header {
 .upload_img {
   margin-top: 15px;
   width: fit-content;
+  cursor: pointer;
 }
+
 .play-pause {
   display: flex;
   width: 200px;
