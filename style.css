@@ -373,6 +373,7 @@ h2 {
   grid-template-columns: 1fr;
   padding: 20px;
   font-weight: bold;
+  background-color: var(--light-pineapple);
 }
 .int-info {
   width: 90vw;
@@ -538,6 +539,7 @@ h2 {
   }
   .int-info {
     width: 80vw;
+    padding: 0 120px;
   }
 }
 
